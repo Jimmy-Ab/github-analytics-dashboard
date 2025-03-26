@@ -1,6 +1,5 @@
 # 🚀 GitHub Analytics Dashboard
 
-![Dashboard Preview](/public/screenshot.png)  
 *A sleek dashboard for GitHub profile and repo analytics with dark/light mode.*
 
 ---
