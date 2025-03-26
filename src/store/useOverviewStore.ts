@@ -53,7 +53,7 @@ export const useGitHubStore = create<GitHubStore>((set, get) => ({
       if (!reposResponse.ok) throw new Error("Repositories not found");
 
       const userData: GitHubUser = await userResponse.json();
-      let reposData: Repository[] = await reposResponse.json();
+      const reposData: Repository[] = await reposResponse.json();
 
       // Sort repos by stargazers_count (descending) and pick the top 3
     //   reposData = reposData

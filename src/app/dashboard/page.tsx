@@ -115,6 +115,12 @@ const Overview: React.FC = () => {
                       <span className="font-semibold">{user.following}</span> following
                     </span>
                   </div>
+                  <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
+                    <GitBranch className="h-5 w-5" />
+                    <span>
+                      <span className="font-semibold">{user.public_repos}</span> public Repos
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>

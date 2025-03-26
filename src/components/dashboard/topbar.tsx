@@ -1,6 +1,5 @@
-
 import React from "react";
-import {  Moon, Sun, LogOut } from "lucide-react";
+import { Moon, Sun, LogOut } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -10,7 +9,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { useAuthStore } from "@/store/authStore";
 import { useSettingsStore } from "@/store/useSettingsStore";
 
@@ -35,14 +34,16 @@ const Topbar: React.FC = () => {
   };
 
   return (
-    <div className={`
+    <div
+      className={`
       h-16 border-b 
       border-gray-200 dark:border-gray-800 
       flex items-center justify-between px-6 
       sticky top-0 z-20 
       bg-white/80 dark:bg-gray-900 
       backdrop-blur-md
-    `}>
+    `}
+    >
       {/* Left side */}
       <div>
         <h1 className="text-xl font-medium text-gray-900 dark:text-white">
@@ -58,7 +59,9 @@ const Topbar: React.FC = () => {
           size="icon"
           className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
           onClick={toggleTheme}
-          aria-label={theme === "light" ? "Switch to dark mode" : "Switch to light mode"}
+          aria-label={
+            theme === "light" ? "Switch to dark mode" : "Switch to light mode"
+          }
         >
           {theme === "light" ? (
             <Moon size={20} className="text-gray-700 dark:text-gray-300" />
@@ -69,8 +72,8 @@ const Topbar: React.FC = () => {
         {/* User Dropdown */}
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button 
-              variant="ghost" 
+            <Button
+              variant="ghost"
               className="relative h-8 w-8 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700"
             >
               <Avatar className="h-8 w-8">
@@ -80,9 +83,9 @@ const Topbar: React.FC = () => {
               </Avatar>
             </Button>
           </DropdownMenuTrigger>
-          <DropdownMenuContent 
-            className="w-56 bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700" 
-            align="end" 
+          <DropdownMenuContent
+            className="w-56 bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700"
+            align="end"
             forceMount
           >
             <DropdownMenuLabel className="font-normal bg-white dark:bg-gray-800">
@@ -96,7 +99,7 @@ const Topbar: React.FC = () => {
               </div>
             </DropdownMenuLabel>
             <DropdownMenuSeparator className="bg-gray-200 dark:bg-gray-700" />
-            <DropdownMenuItem 
+            <DropdownMenuItem
               className="cursor-pointer text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
               onClick={handleLogout}
             >

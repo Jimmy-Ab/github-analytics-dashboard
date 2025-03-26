@@ -1,10 +1,10 @@
 // store/repositoriesStore.ts
 
-import { create } from 'zustand';
+import { create } from "zustand";
 
 interface Repository {
-  owner: any;
-  stargazers_count: any;
+  owner: string;
+  stargazers_count: number;
   updated_at: string | number | Date;
   name: string;
   description: string;
@@ -29,11 +29,13 @@ export const useRepositoriesStore = create<RepositoriesState>((set) => ({
   fetchRepositories: async (username) => {
     set({ loading: true, error: null });
     try {
-      const response = await fetch(`https://api.github.com/users/${username}/repos`);
+      const response = await fetch(
+        `https://api.github.com/users/${username}/repos`
+      );
       const data = await response.json();
       set({ repositories: data, loading: false });
-    } catch (error) {
-      set({ loading: false, error: 'Failed to fetch repositories' });
+    } catch {
+      set({ loading: false, error: "Failed to fetch repositories" });
     }
   },
 }));

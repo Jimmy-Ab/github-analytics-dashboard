@@ -1,25 +1,12 @@
 "use client";
 
-import { ReactNode, useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
-import Sidebar from "@/components/dashboard/sidebar";
-import Topbar from "@/components/dashboard/topbar";
-import { useAuthStore } from "@/store/authStore";
-import { useSettingsStore } from "@/store/useSettingsStore";
+import { ReactNode } from "react";
 
-const Login = ({ children }: { children: ReactNode }) => {
-  const [collapsed, setCollapsed] = useState(false);
-  const { isAuthenticated } = useAuthStore();
-  const { theme } = useSettingsStore();
-  const router = useRouter();
-
-  // Redirect to login if not authenticated
+const LoginLayout = ({ children }: { children: ReactNode }) => {
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-800">
-            {children}
-    </div>
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-800">{children}</div>
   );
 };
 
-export default Login;
+export default LoginLayout;
