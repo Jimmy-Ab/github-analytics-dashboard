@@ -8,17 +8,14 @@
 
 ### 📊 Profile Overview
 - **User Stats**: Avatar, bio, followers, following, public repos  
-- **Top Repos**: Most starred repositories with descriptions  
-- **Theme Toggle**: Dark/light mode with system preference detection  
+- **Top Repos**: Most starred repositories with descriptions
+- **List Of Repositories**: show all of the users public repos  
+- **Activities**: view list of users activities
+- **Settings**: Adjust apperance settings  
 
-### ⚡ Performance
-- **SSR/ISR**: Fast loading with Incremental Static Regeneration  
-- **Optimized API Calls**: Cached responses to avoid rate limits  
-- **Skeleton Loading**: Smooth UI transitions  
 
 ### 🔍 Search
-- Look up any GitHub user  
-- URL-sharing for profiles (e.g., `/overview?username=yourname`)  
+- Look up any GitHub username  
 
 ---
 
@@ -37,8 +34,22 @@
 
 ## 🚀 Quick Start
 
-### 1. Clone & Install
+### Clone & Install
 ```bash
-git clone https://github.com/your-username/github-analytics.git
-cd github-analytics
+git clone https://github.com/Jimmy-Ab/github-analytics-dashboards.git
+```
+
+```bash
+cd github-analytics-dashboard
+```
+```bash
 npm install
+```
+to run the dev server
+```bash
+npm run dev
+```
+to build the project
+```bash
+npm run build
+```
